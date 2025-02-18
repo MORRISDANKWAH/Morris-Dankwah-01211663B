@@ -1,25 +1,15 @@
-import java.util.Scanner;
+def sum_of_2d_array(arr):
+total = 0
+        for row in arr:
+        for element in row:
+total += element
+    return total
 
-public class DCMotorSpeed {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        System.out.print("Enter Voltage (V): ");
-        double voltage = scanner.nextDouble();
-        
-        System.out.print("Enter Back EMF (V): ");
-        double backEMF = scanner.nextDouble();
-        
-        System.out.print("Enter Motor Constant (RPM/V): ");
-        double motorConstant = scanner.nextDouble();
-        
-        if (motorConstant <= 0) {
-            System.out.println("Motor Constant must be greater than zero.");
-        } else {
-            double speed = (voltage - backEMF) * motorConstant;
-            System.out.println("Calculated Speed: " + speed + " RPM");
-        }
-        
-        scanner.close();
-    }
-}
+# Example usage:
+array = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+        ]
+
+print("Sum of all elements in the 2D array:", sum_of_2d_array(array))
